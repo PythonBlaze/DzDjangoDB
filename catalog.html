@@ -1,0 +1,15 @@
+<h1>Каталог телефонов</h1>
+
+<!-- Ссылки для сортировки -->
+<a href="?sort=name&order=asc">По названию (А-Я)</a>
+<a href="?sort=name&order=desc">По названию (Я-А)</a>
+<a href="?sort=price&order=asc">По цене (по возрастанию)</a>
+<a href="?sort=price&order=desc">По цене (по убыванию)</a>
+
+<ul>
+{% for phone in phones %}
+  <li>
+    <a href="{% url 'phone_detail' phone.slug %}">{{ phone.name }}</a> - {{ phone.price }} руб.
+  </li>
+{% endfor %}
+</ul>
