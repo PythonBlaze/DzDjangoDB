@@ -1,0 +1,6 @@
+<h1>{{ phone.name }}</h1>
+<img src="{{ phone.image }}" alt="{{ phone.name }}">
+<p>Цена: {{ phone.price }} руб.</p>
+<p>Дата релиза: {{ phone.release_date }}</p>
+<p>LTE поддержка: {{ phone.lte_exists }}</p>
+<a href="{% url 'catalog' %}">Вернуться к каталогу</a>
